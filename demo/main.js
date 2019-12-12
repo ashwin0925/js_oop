@@ -509,66 +509,66 @@ console.groupEnd();
 
 // Class
 
-// class CreateUser {
-//   constructor(name, maths, science, english) {
-//     this.name = name;
-//     this.maths = maths;
-//     this.science = science;
-//     this.english = english;
-//   }
-//   fullMarks() {
-//     return `Total Marks: ${this.maths + this.science + this.english}`;
-//   }
-//   percentage() {
-//     console.log(
-//       `Percentage: ${Math.floor(
-//         (this.maths + this.science + this.english) / 3
-//       )}%`
-//     );
-//     return Math.floor((this.maths + this.science + this.english) / 3);
-//   }
-//   passOrFail() {
-//     return this.percentage() > 40 ? "You Passed" : "You Failed";
-//   }
-// }
+ class CreateUser {
+   constructor(name, maths, science, english) {
+     this.name = name;
+     this.maths = maths;
+     this.science = science;
+     this.english = english;
+   }
+   fullMarks() {
+     return `Total Marks: ${this.maths + this.science + this.english}`;
+   }
+   percentage() {
+     console.log(
+       `Percentage: ${Math.floor(
+         (this.maths + this.science + this.english) / 3
+       )}%`
+     );
+     return Math.floor((this.maths + this.science + this.english) / 3);
+   }
+   passOrFail() {
+     return this.percentage() > 40 ? "You Passed" : "You Failed";
+   }
+ }
 
-// class PaidCreateUser extends CreateUser {
-//   constructor(name, maths, science, english, kannada, hindi) {
-//     super(name, maths, science, english);
-//     this.kannada = kannada;
-//     this.hindi = hindi;
-//   }
-//   languagePercentage() {
-//     console.log(
-//       `Percentage: ${Math.floor(
-//         (this.kannada + this.hindi + this.english) / 3
-//       )}%`
-//     );
-//     return Math.floor((this.maths + this.science + this.english) / 3);
-//   }
-//   changeName(name) {
-//     this.name = name;
-//     return this.name;
-//   }
-// }
-// // 1. creates a new emply object
-// // 2. replace the object __proto__ to functions prototype
-// // 3. return the object (this) implisit
+ class PaidCreateUser extends CreateUser {
+   constructor(name, maths, science, english, kannada, hindi) {
+     super(name, maths, science, english);
+     this.kannada = kannada;
+     this.hindi = hindi;
+   }
+   languagePercentage() {
+     console.log(
+       `Percentage: ${Math.floor(
+         (this.kannada + this.hindi + this.english) / 3
+       )}%`
+     );
+     return Math.floor((this.maths + this.science + this.english) / 3);
+   }
+   changeName(name) {
+     this.name = name;
+     return this.name;
+   }
+ }
+ // 1. creates a new emply object
+ // 2. replace the object __proto__ to functions prototype
+ // 3. return the object (this) implisit
 
-// let aswin = new CreateUser("Aswin", 78, 70, 90);
-// console.group("Aswin");
-// console.log(aswin.fullMarks());
-// console.log(aswin.percentage());
-// console.log(aswin.passOrFail());
-// console.groupEnd();
+ let aswin = new CreateUser("Aswin", 78, 70, 90);
+ console.group("Aswin");
+ console.log(aswin.fullMarks());
+ console.log(aswin.percentage());
+ console.log(aswin.passOrFail());
+ console.groupEnd();
 
-// let piyush = new PaidCreateUser("Piyush", 78, 98, 90, 90, 87);
-// console.group("Piyush");
-// console.log(piyush.fullMarks());
-// console.log(piyush.percentage());
-// console.log(piyush.passOrFail());
-// console.log(piyush.languagePercentage());
-// console.log(piyush.changeName("Ritik"));
-// console.log(piyush);
+ let piyush = new PaidCreateUser("Piyush", 78, 98, 90, 90, 87);
+ console.group("Piyush");
+ console.log(piyush.fullMarks());
+ console.log(piyush.percentage());
+ console.log(piyush.passOrFail());
+ console.log(piyush.languagePercentage());
+ console.log(piyush.changeName("Ritik"));
+ console.log(piyush);
 
-// console.groupEnd();
+ console.groupEnd();
